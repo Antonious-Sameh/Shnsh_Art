@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShnshArt</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav id="navbar">
+        <div class="logo">
+            <img src="images/logo.png" alt="لوغو منصة الفنان" />
+            <span> لمسة فن</span>
+        </div>
+        <ul>
+            <li><a href="#gallery">رسوماتي</a></li>
+            <li><a href="#about">من نحن</a></li>
+            <li><a href="#why">لماذا تختار منصتنا</a></li>
+            <li><a href="#courses">الكورسات</a></li>
+            <li><a href="#trial">النسخة التجريبية</a></li>
+            <li><a href="#contact">تواصل معنا</a></li>
+        </ul>
+
+        <!-- أيقونة الموبايل -->
+        <div class="menu-icon" onclick="toggleSidebar()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </nav>
+
+    <!-- القائمة الجانبية للموبايل -->
+    <div class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="#gallery" onclick="closeSidebar()">رسوماتي</a></li>
+            <li><a href="#about" onclick="closeSidebar()">من نحن</a></li>
+            <li><a href="#why" onclick="closeSidebar()">لماذا تختار منصتنا</a></li>
+            <li><a href="#courses" onclick="closeSidebar()">الكورسات</a></li>
+            <li><a href="#trial" onclick="closeSidebar()">النسخة التجريبية</a></li>
+            <li><a href="#contact" onclick="closeSidebar()">تواصل معنا</a></li>
+        </ul>
+    </div>
+
+
+    <!-- معرض الصور -->
+    <section id="gallery" class="gallery-section">
+        <h2>رسوماتي</h2>
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <img src="images/art1.jpg" alt="لوحة 1">
+            </div>
+            <div class="gallery-item">
+                <img src="images/art2.jpg" alt="لوحة 2">
+            </div>
+            <div class="gallery-item">
+                <img src="images/art3.jpg" alt="لوحة 3">
+            </div>
+            <div class="gallery-item">
+                <img src="images/art4.jpg" alt="لوحة 4">
+            </div>
+        </div>
+    </section>
+
+    <!-- من نحن -->
+    <section id="about" class="about-section">
+        <h2>من نحن</h2>
+        <p>
+            نحن منصة تعليمية وفنية متخصصة في عرض أعمال فنية مميزة وتقديم كورسات احترافية
+            في الرسم والفنون التشكيلية. هدفنا هو مساعدة الموهوبين على تطوير مهاراتهم
+            ومشاركة إبداعاتنا مع العالم.
+        </p>
+    </section>
+
+    <!-- لماذا تختار منصتنا -->
+    <section id="why" class="why-section">
+        <h2>لماذا تختار منصتنا</h2>
+        <div class="why-container">
+            <div class="why-card">
+                <img src="icons/quality.png" alt="جودة عالية">
+                <h3>جودة عالية</h3>
+                <p>نقدم محتوى احترافي ودروس عملية تضمن لك التعلم بأفضل شكل.</p>
+            </div>
+            <div class="why-card">
+                <img src="icons/support.png" alt="دعم دائم">
+                <h3>دعم دائم</h3>
+                <p>فريقنا موجود للرد على أسئلتك ومساعدتك في أي وقت.</p>
+            </div>
+            <div class="why-card">
+                <img src="icons/experience.png" alt="خبرة">
+                <h3>خبرة طويلة</h3>
+                <p>سنوات من الخبرة في مجال الرسم والفن الإبداعي.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- الكورسات -->
+    <section id="courses" class="courses-section">
+        <h2>الكورسات</h2>
+        <div class="courses-container">
+            <div class="course-card">
+                <img src="img/course1.jpg" alt="اساسيات الرسم">
+                <h3>اساسيات الرسم</h3>
+                <button onclick="accessCourse('basics')">دخول الكورس</button>
+            </div>
+            <div class="course-card">
+                <img src="img/course2.jpg" alt="كورس البورتريه">
+                <h3>كورس البورتريه</h3>
+                <button onclick="accessCourse('oil')">دخول الكورس</button>
+            </div>
+            <div class="course-card">
+                <img src="img/course3.jpg" alt="كورس الالوان">
+                <h3>كورس الالوان</h3>
+                <button onclick="accessCourse('charcoal')">دخول الكورس</button>
+            </div>
+            <div class="course-card">
+                <img src="img/course4.jpg" alt="كورس الاطفال">
+                <h3>كورس الاطفال</h3>
+                <button onclick="accessCourse('kids')">دخول الكورس</button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- النسخة التجريبية -->
+    <section id="trial" class="trial-section">
+        <h2>النسخة التجريبية من الكورس</h2>
+        <button onclick="showTrialVideos()">عرض النسخة التجريبية</button>
+        <div class="trial-videos" id="trialVideos" style="display: none;">
+
+            <!-- فيديو 1 -->
+            <div class="trial-card">
+                <iframe src="https://drive.google.com/file/d/10FLWgmXkXffxAnVYVhxSA6xIK8CVET_T/preview" width="100%"
+                    height="180" allow="autoplay" allowfullscreen loading="lazy">
+                </iframe>
+                <h3>جزء من كورس اساسيات الرسم</h3>
+            </div>
+
+            <!-- فيديو 2 -->
+            <div class="trial-card">
+                <iframe src="https://drive.google.com/file/d/1pE4DxitgtSKKbF0NxgC6jp64b9rFJY3j/preview" width="100%"
+                    height="180" allow="autoplay" allowfullscreen loading="lazy">
+                </iframe>
+                <h3>جزء من كورس البورتريه "العين نظري"</h3>
+            </div>
+
+            <!-- فيديو 3  -->
+            <div class="trial-card">
+                <iframe src="https://www.youtube.com/embed/uqURhj_EZCU?si=hwWK_zUTZj_QSUn1" width="100%" height="180"
+                    allow="autoplay" allowfullscreen loading="lazy">
+                </iframe>
+                <h3>العين عملي</h3>
+            </div>
+
+            <!-- فيديو 4 -->
+            <div class="trial-card">
+                <iframe src="https://drive.google.com/file/d/1ZEOfI9mdlzDCPAJ7-EWoM9yhx9CsoMaL/preview" width="100%"
+                    height="180" allow="autoplay" allowfullscreen loading="lazy">
+                </iframe>
+                <h3>ازاي تطلع اي درجة لون من 3 الوان فقط</h3>
+            </div>
+
+            <!-- فيديو 5 -->
+            <div class="trial-card">
+                <iframe src="https://drive.google.com/file/d/1wZ4RDmdrvvYpXPOg99CcODoCyUH0fgPv/preview" width="100%"
+                    height="180" allow="autoplay" allowfullscreen loading="lazy">
+                </iframe>
+                <h3>شرح نظري من كورس الالوان</h3>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+
+    <!-- تواصل معنا -->
+    <section id="contact" class="contact-section">
+        <h2>تواصل معنا</h2>
+        <form class="contact-form" onsubmit="sendMessage(event)">
+            <input type="text" id="name" placeholder="الاسم" required>
+            <input type="email" id="email" placeholder="البريد الإلكتروني" required>
+            <textarea id="message" placeholder="الرسالة" rows="5" required></textarea>
+            <button type="submit">إرسال</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2025 منصة الفنان. جميع الحقوق محفوظة.</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/profile.php?id=61553341864739" target="_blank" aria-label="Facebook">
+                <img src="icons/facebook.png" alt="فيسبوك" />
+            </a>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
