@@ -8,7 +8,7 @@
 ---
 
 ## 📸 صورة من المشروع
-![screenshot](screenshot.png)
+![Screenshot](Screenshot.png)
 
 ---
 
